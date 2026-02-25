@@ -236,8 +236,17 @@
   .-top-4 {
     top: calc(var(--spacing) * -4);
   }
+  .top-1\/2 {
+    top: calc(1 / 2 * 100%);
+  }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
+  }
+  .right-4 {
+    right: calc(var(--spacing) * 4);
   }
   .-bottom-2 {
     bottom: calc(var(--spacing) * -2);
@@ -245,8 +254,14 @@
   .bottom-8 {
     bottom: calc(var(--spacing) * 8);
   }
+  .bottom-20 {
+    bottom: calc(var(--spacing) * 20);
+  }
   .left-0 {
     left: calc(var(--spacing) * 0);
+  }
+  .left-1\/2 {
+    left: calc(1 / 2 * 100%);
   }
   .left-4 {
     left: calc(var(--spacing) * 4);
@@ -377,6 +392,9 @@
   .h-28 {
     height: calc(var(--spacing) * 28);
   }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
   .h-36 {
     height: calc(var(--spacing) * 36);
   }
@@ -437,6 +455,9 @@
   .w-28 {
     width: calc(var(--spacing) * 28);
   }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
   .w-36 {
     width: calc(var(--spacing) * 36);
   }
@@ -464,6 +485,9 @@
   .min-w-0 {
     min-width: calc(var(--spacing) * 0);
   }
+  .min-w-\[80px\] {
+    min-width: 80px;
+  }
   .flex-1 {
     flex: 1;
   }
@@ -473,8 +497,19 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .resize {
     resize: both;
@@ -526,6 +561,9 @@
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -745,6 +783,9 @@
   .px-14 {
     padding-inline: calc(var(--spacing) * 14);
   }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
+  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -786,6 +827,9 @@
   }
   .pt-7 {
     padding-top: calc(var(--spacing) * 7);
+  }
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
@@ -961,6 +1005,11 @@
   .underline-offset-2 {
     text-underline-offset: 2px;
   }
+  .placeholder-gray-400 {
+    &::placeholder {
+      color: var(--color-gray-400);
+    }
+  }
   .placeholder-gray-700\/80 {
     &::placeholder {
       color: color-mix(in srgb, oklch(37.3% 0.034 259.733) 80%, transparent);
@@ -979,6 +1028,9 @@
   }
   .opacity-5 {
     opacity: 5%;
+  }
+  .opacity-10 {
+    opacity: 10%;
   }
   .opacity-90 {
     opacity: 90%;
@@ -1353,6 +1405,21 @@
     }
   }
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -1557,6 +1624,9 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
